@@ -3,64 +3,59 @@
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
     background-color: #ddd;  
 }
 
 /* INICIO HEADER */
 
 .nave{
-    background-color: #4b4be2;
-    height: 120px;
-    width: 100%;
-    border: 0;
+    background-color: #2980b9;
+    padding: 20px 32px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 10px;
+    position: sticky;
 }
 
 .image{
     display: flex;
-    border: 0;
+    justify-content: space-between;
+    align-items: center;
     
-     
 }
 
 .image img{
-    height: 50%;
-    padding-top: 0;
-    
+    height: 70px;
 }
 
-.image h3 {
-    padding: 0 20px;
-    padding-top: 10px;
-    font-weight: bold;
-    font-size: 35px;
-   
-
-}
-
-.image a{
+.image h3 a{
     text-decoration: none;
     color: #ddd;
+    font-size: 38px;
+    font-weight: 700;
+    padding: 0 15px;
+    transition: 0.8s;
+}
+
+.image a:hover{
+    color: #fff;
 }
 
 .nave p{
-    margin-top: -40px;
+    color: #ddd;
     font-size: 20px;
-    color: white;
-    
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 600;
+
 }
 
-
-.nav-list a:hover{
-    color: #ffff;
-}
 
 .login .container{
     max-width: 600px;
@@ -166,4 +161,111 @@ footer h3{
 footer p{
     margin-top: 5px;
    
+}
+
+
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    /* Header */
+    .nave {
+        padding: 15px 20px;
+    }
+    
+    .image img {
+        height: 50px;
+    }
+    
+    .image h3 a {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+    
+    .nave p {
+        font-size: 16px;
+    }
+
+    /* Login Container */
+    .login .container {
+        margin: 40px auto;
+        padding: 24px;
+        max-width: 90%;
+    }
+    
+    .login .header h2 {
+        font-size: 24px;
+    }
+    
+    .btn-entrar {
+        font-size: 18px;
+        padding: 14px;
+    }
+    
+    .links a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    .nave {
+        padding: 10px 15px;
+    }
+    
+    .image img {
+        height: 40px;
+    }
+    
+    .image h3 a {
+        font-size: 22px;
+    }
+    
+    .nave p {
+        font-size: 14px;
+    }
+
+    /* Login Container */
+    .login .container {
+        margin: 30px auto;
+        padding: 16px;
+    }
+    
+    .form-login input {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .btn-entrar {
+        font-size: 16px;
+        padding: 12px;
+    }
+    
+    .links a {
+        font-size: 13px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px 0;
+        font-size: 14px;
+    }
+    
+    footer h3 {
+        font-size: 16px;
+    }
+}
+
+/* Melhoria para telas muito pequenas */
+@media (max-width: 320px) {
+    .image h3 a {
+        font-size: 20px;
+    }
+    
+    .nave p {
+        font-size: 13px;
+    }
+    
+    .login .header h2 {
+        font-size: 22px;
+    }
 }

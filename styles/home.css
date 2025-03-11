@@ -17,7 +17,7 @@ html{
 /* INICIO HEADER */
 
 .nave{
-    background-color: #4b4be2;
+    background-color: #2980b9;
     height: 80px;
     width: 100%;
     display: flex;
@@ -218,4 +218,56 @@ footer p{
    
 }
 
+@media (max-width: 1050px){
+    .main h1{
+        font-size: 35px;
+    }
 
+    .main p{
+        font-size: 18px;
+    }
+
+    .main{
+        background-size: cover;
+    }
+
+    .about{
+        flex-direction: column;
+        padding-top: 80px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+
+    .about div{
+        max-width: 80%;
+    }
+
+    .about div h2{
+        font-size: 45px;
+    }
+
+    .about img{
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    .projects img{
+        width: 27.5%;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    
+
+    footer h3{
+        font-size: 24px;
+        margin-top: 8px;
+    }
+
+    footer p{
+        margin: 0;
+    }
+}
