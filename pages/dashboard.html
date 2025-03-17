@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SaúdePrime - Dasboard</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>SaúdePrime</h1>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="#">Consultas</a></li>
+                    <li><a href="#">Agenda</a></li>
+                    <li><a href="#">Histórico</a></li>
+                    <li><a href="#">Pacientes</a></li>
+                    <li><a href="#">Profissional de Saúde</a></li>
+                    <li><a href="#">Exames</a></li>
+                    <li<button type="button" id="logout-button" onclick="handleLogout()">Sair</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="container">
+                <h2>Olá, <span id="user-name">Joana Beatriz</span>!</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h4>Próxima Consulta</h4>
+                        <p>Psicólogo - Dr. Assis António</p>
+                        <p>Seg, 22 de abr. de 2025 - 11:30</p>
+                        <button>Ver Detalhes</button>
+                    </div>
+                    <div class="button-container">
+                        <button>Agendar Consultas</button>
+                        <button>Ver Histórico</button>
+                    </div>
+                    <div class="card">
+                        <h4>Histórico de Consultas</h4>
+                        <p>Pendentes: 2 | Finalizadas: 5 | Canceladas: 1</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="content">
+            <p>&copy; 2025  SaúdePrime - Todos os Direitos Reservados</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/scripts/validation.js"></script>
+    <script src="/scripts/logout.js"></script>
+</body>
+
+</html>

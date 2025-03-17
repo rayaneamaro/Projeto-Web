@@ -6,77 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles/auth.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>SaúdePrime - Cadastro</title>
 </head>
 
 <body>
-    <nav class="nave">
-        <div class="image">
-            <img src="assets/logo.png" alt="logo">
-            <h3><a href="index.html">SaúdePrime</a></h3>
-        </div>
-        <p>Sistema de Agendamento de Consultas</p>
-    </nav>
-
-    <section class="login">
+    <header>
         <div class="container">
-            <section class="header">
-                <h2>Cadastre -se</h2>
-            </section>
-
-            <form class="form-login">
-                <div class="input-group">
-                    <label for="email">E-mail</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email"
-                        placeholder="Digite seu e-mail"
-                        required
-                    >
-                </div>
-
-                <div class="input-group">
-                    <label for="senha">Senha</label>
-                    <input 
-                        type="password" 
-                        id="senha" 
-                        name="senha"
-                        placeholder="Digite sua senha"
-                        required
-                    >
-                </div>
-
-                <div class="input-group">
-                    <label for="senha">Confirmação de Senha</label>
-                    <input 
-                        type="password" 
-                        id="senha" 
-                        name="senha"
-                        placeholder="Confirme sua senha"
-                        required
-                    >
-                </div>
-
-                <button type="submit" class="btn-entrar">Cadastrar</button>
-
-                <div class="links">
-                    
-                    <p>Já tem conta?  <a href="login.html">Faça login</a></p>
-                </div>
-            </form>
+            <h1>SaúdePrime</h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/login.html">Login</a></li>
+                    <li><a href="/pages/cadastro.html" class="active">Cadastro</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    
+    <main>
+        <section class="login">
+            <div class="container">
+                <h2>Cadastre-se</h2>
+                <form action="#" class="login-form">
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" onchange="onchangeEmail()"
+                            placeholder="Digite seu e-mail" required>
+                        <div class="error" id="email-requerid-error">E-mail é obrigatório</div>
+                        <div class="error" id="email-invalid-error">E-mail é inválido</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" onchange="onchangePassword()"
+                            placeholder="Digite sua senha" required>
+                        <div class="error" id="password-requerid-error">Senha é obrigatório</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Confirme a senha:</label>
+                        <input type="password" id="password" name="password" onchange="onchangePassword()"
+                            placeholder="Confirme sua senha" required>
+                        <div class="error" id="password-requerid-error">Senha é obrigatório</div>
+                    </div>
+                    <button type="button" class="btn" id="login-button" disabled onclick="handleLogin()">Cadastrar</button>
+                    
+                </form>
+                <p class="register-link">Já tem uma conta? <a href="/pages/login.html" onclick="register()">Faça Login</a>.</p>
+            </div>
+        </section>
+    </main>
+
 
     <footer>
-        <h3>SaúdePrime</h3>
-        <p>&copy;Todos os direitos reservados</p>
+        <div class="content">
+            <p>&copy; 2025  SaúdePrime - Todos os Direitos Reservados</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
 </body>
 

@@ -1,42 +1,59 @@
+// Exibe uma mensagem de alerta
+function showAlert(message) {
+    alert(message);
+}
+
+// Redireciona para a página de dashboard
 function redirectToDashboard() {
-    window.location.href = "dashboard.html";
+    window.location.href = "/pages/dashboard.html"; // Ajuste o caminho, se necessário
 }
 
-function register() {
-    window.location.href = "cadastro.html";
-}
+// Realiza a autenticação do usuário
+async function authenticateUser(email, password) {
+    try {
+        const response = await fetch('http://localhost:3000/users');
+        if (!response.ok) {
+            throw new Error('Erro ao conectar ao servidor.');
+        }
 
-async function login(email, password) {
-    const response = await fetch('http://localhost:3000/users');
-    const users = await response.json();
-
-    const user = users.find(user => user.email === email && user.password === password);
-    if (user) {
-        redirectToDashboard();
-    } else {
-        alert('E-mail ou senha inválidos.');
+        const users = await response.json();
+        return users.find(user => user.email === email && user.password === password);
+    } catch (error) {
+        console.error('Erro na autenticação:', error);
+        showAlert('Erro ao autenticar. Tente novamente mais tarde.');
+        return null;
     }
 }
 
-
-
+// Lida com o processo de login
 async function handleLogin() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    console.log('E-mail:', email);
+    console.log('Senha:', password);
 
     if (!email || !password) {
-        alert('Por favor, preencha todos os campos.');
+        showAlert('Por favor, preencha todos os campos.');
         return;
     }
 
-    await login(email, password);
+    const user = await authenticateUser(email, password);
+    console.log('Usuário autenticado:', user);
+
+    if (user) {
+        sessionStorage.setItem('user', JSON.stringify(user));
+        redirectToDashboard();
+    } else {
+        showAlert('E-mail ou senha inválidos.');
+    }
 }
 
-
-function logout() {
-    // Limpa os dados de sessão/localStorage (se aplicável)
-    localStorage.removeItem('user'); // Exemplo: remove o usuário armazenado
-    sessionStorage.removeItem('user'); // Exemplo: remove o usuário armazenado na sessão
+// Lida com o processo de logout
+function handleLogout() {
+    // Limpa os dados de sessão/localStorage
+    localStorage.removeItem('user');
+    sessionStorage.removeItem('user');
 
     // Redireciona para a página de login
     window.location.href = "login.html";
