@@ -88,7 +88,7 @@
 .button-container button {
     padding: 10px 20px;
     margin-right: 10px;
-    background-color: #4caf50;
+    background-color: #004D80;
     color: white;
     border: none;
     border-radius: 5px;
@@ -99,5 +99,5 @@
 }
 
 .button-container button:hover {
-    background-color: #45a049;
+    background-color: #2085d8;
 }

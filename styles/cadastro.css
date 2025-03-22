@@ -1,111 +1,111 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5; 
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
-  }
-  
-  
-  main {
-    padding: 20px;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .login {
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .container {
-    margin-bottom: 20px;
-  }
-  
-  .container h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 32px;
-    color: #4caf50;
-  }
-  
-  .login-form .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .login-form .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .login-form .form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .login-form input:focus {
-    outline: none;
-    border-color: #4caf50;
-  }
-  
-  .error {
-    color: red;
-    font-size: 0.9rem;
-    display: none;
-  
-  }
-  
-  .btn {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 10px;
-    transition: background-color 0.3s;    
-  }
-  
-  .btn:hover {
-    background-color: #45a049;
-  }
-  
- 
-  
-  .register-link {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 0.9rem;
-  }
-  
-  .register-link a {
-    color: #4caf50;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .register-link a:hover {
-    text-decoration: underline;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  /* O header será configurado automaticamente pelo header.css */
+}
+
+footer {
+  /* O footer será configurado automaticamente pelo footer.css */
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.cadastro {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  color: #4caf50;
+}
+
+.cadastro-form .form-group {
+  margin-bottom: 20px;
+}
+
+.cadastro-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cadastro-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.cadastro-form input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
