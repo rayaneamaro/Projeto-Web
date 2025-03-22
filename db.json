@@ -1,16 +1,5 @@
 {
   "users": [
-    {
-      "id": "fc84",
-      "username": "user3",
-      "email": "valdeilsonbdl56@gmail.com",
-      "password": "12345678"
-    },
-    {
-      "id": "802a",
-      "username": "user3",
-      "email": "usuario@exemplo.com",
-      "password": "12345678"
-    }
+    
   ]
 }
