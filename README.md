@@ -4,18 +4,37 @@
 SaúdePrime é um sistema web desenvolvido para gerenciar consultas, agendas e históricos de pacientes. Este projeto inclui funcionalidades de login, dashboard, agendamento de consultas e visualização de históricos.
 
 ## Estrutura do Projeto
+
 - **/pages**: Contém as páginas HTML do projeto.
-  - `login.html`: Página de login.
-  - `dashboard.html`: Página de dashboard.
-  - `cadastro.html`: Página de cadastro.
-- **/styles**: Contém os arquivos CSS para estilização.
-  - `header.css`: Estilos para o cabeçalho.
-  - `footer.css`: Estilos para o rodapé.
-  - `dashboard.css`: Estilos para a página de dashboard.
-- **/scripts**: Contém os arquivos JavaScript para funcionalidades.
-  - `login.js`: Funções relacionadas ao login.
-  - `logout.js`: Funções relacionadas ao logout.
-  - `validation.js`: Funções de validação de formulários.
+  - `index.html`: Página inicial do sistema.
+  - `login.html`: Página de login para autenticação de usuários.
+  - `dashboard.html`: Página de dashboard com informações e funcionalidades principais.
+  - `cadastro.html`: Página de cadastro para novos usuários.
+
+- **/styles**: Contém os arquivos CSS para estilização do projeto.
+  - `header.css`: Estilos para o cabeçalho do site.
+  - `footer.css`: Estilos para o rodapé do site.
+  - `dashboard.css`: Estilos específicos para a página de dashboard.
+  - `index.css`: Estilos específicos para a página inicial.
+  - `login.css`: Estilos específicos para a página de login.
+  - `cadastro.css`: Estilos específicos para a página de cadastro.
+
+- **/scripts**: Contém os arquivos JavaScript para funcionalidades do sistema.
+  - `validationEmail.js`: Funções para validação de e-mails.
+  - `auth.js`: Lógica de autenticação e redirecionamento após login.
+  - `logout.js`: Gerenciamento de logout e redirecionamento para a página de login.
+  - `validation.js`: Funções genéricas para validação de formulários.
+
+- **/data**: Contém arquivos de dados para o servidor fictício.
+  - `db.json`: Arquivo JSON com os dados iniciais, como usuários e informações de teste.
+
+- **/assets**: Contém recursos estáticos como imagens e ícones.
+  - `logo.png`: Logotipo do sistema.
+  - `favicon.ico`: Ícone do site.
+
+- **/docs**: Contém documentação adicional do projeto.
+  - `README.md`: Arquivo de documentação principal.
+  - `LICENSE`: Arquivo de licença do projeto.
 
 ## Instalação
 1. Clone o repositório para o seu ambiente local:
@@ -34,7 +53,7 @@ Para rodar um servidor fictício usando JSON Server:
 
 npm install -g json-server
 
-2. Crie um arquivo db.json na raiz do projeto com os dados iniciais:
+2. Crie um arquivo db.json na raiz do projeto com os dados iniciais ou na tela de cadastro, realiza um cadastro de um novo usuário
 
 {
   "users": [
@@ -53,7 +72,7 @@ npm install -g json-server
   ]
    }
 
-3. json-server --watch db.json --port 3000
+3. Rode o servidor com o seguinte comando
 
 json-server --watch db.json --port 3000
 
@@ -68,10 +87,10 @@ json-server --watch db.json --port 3000
 
 ## Scripts
 
-* validationEmail.js: Contém funções para validação de e-mail
-* login.js: Contém a lógica para o processo de login.
-* logout.js: Contém a lógica para o processo de logout.
-* validation.js: Contém funções para validação de formulários.
+* **validationEmail.js**: Contém funções para validação de e-mails, garantindo que os endereços inseridos pelos usuários estejam no formato correto.
+* **auth.js**: Implementa a lógica de autenticação, verificando as credenciais do usuário e redirecionando para o dashboard em caso de sucesso.
+* **logout.js**: Gerencia o processo de logout, encerrando a sessão do usuário e redirecionando para a página de login.
+* **validation.js**: Inclui funções genéricas para validação de formulários, como verificação de campos obrigatórios e formatos de entrada.
 
 ## Estilos
 

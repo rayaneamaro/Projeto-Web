@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
 }
 
+
 header {
   /* O header será configurado automaticamente pelo header.css */
 }
@@ -21,7 +22,9 @@ footer {
   /* O footer será configurado automaticamente pelo footer.css */
 }
 
+
 main {
+  padding: 20px;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -39,6 +42,21 @@ main {
 }
 
 .container h2 {
+  
+}
+
+
+.container-form {
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  margin: 14px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-form h2 {
   margin-bottom: 20px;
   text-align: center;
   font-weight: bold;
@@ -53,19 +71,41 @@ main {
 .cadastro-form .form-group label {
   display: block;
   margin-bottom: 5px;
+.form {
+  padding: 18px;
+}
+
+.form-content {
+  margin-bottom: 8px;
+  padding-bottom: 18px;
+  position: relative;
+}
+
+.form-content label {
+  display: inline-block;
+  margin-bottom: 4px;
   font-weight: bold;
   color: #333;
 }
 
 .cadastro-form .form-group input {
+
+.form-content input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+
 }
 
 .cadastro-form input:focus {
+
+
+  
+}
+
+.form-content input:focus {
   outline: none;
   border-color: #4caf50;
 }
@@ -74,6 +114,11 @@ main {
   color: red;
   font-size: 0.9rem;
   display: none;
+.form-content a {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  visibility: hidden;
 }
 
 .btn {
@@ -88,11 +133,25 @@ main {
   width: 100%;
   margin-bottom: 10px;
   transition: background-color 0.3s;
+  transition: background-color 0.3s;    
 }
 
 .btn:hover {
   background-color: #45a049;
 }
+
+.form-content.error input {
+  border-color: red;
+}
+
+.form-content.error a {
+  color: red;
+  font-size: 0.9rem;
+  display: block;
+  visibility: visible;
+}
+
+
 
 .register-link {
   text-align: center;
@@ -108,4 +167,7 @@ main {
 
 .register-link a:hover {
   text-decoration: underline;
+
+}
+
 }

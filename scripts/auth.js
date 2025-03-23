@@ -5,8 +5,9 @@ function showAlert(message) {
 
 // Redireciona para a página de dashboard
 function redirectToDashboard() {
-    window.location.href = "/pages/dashboard.html"; // Ajuste o caminho, se necessário
+    window.location.href = "/pages/dashboard.html";
 }
+
 
 // Realiza a autenticação do usuário
 async function authenticateUser(email, password) {
