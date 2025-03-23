@@ -6,7 +6,7 @@
 
 header {
     background-color: #004D80;
-    padding: 20px 0;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,11 +16,20 @@ header {
 header .container {
     display: flex;
     align-items: center;
-    gap: 15px; /* Espaço entre a logo e o título */
+    justify-content: center;
+    padding: 8px;
+    gap: 8px;
+}
+
+header .container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 header .logo {
-    height: 60px;
+    height: 65px;
     display: block;
 }
 

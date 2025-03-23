@@ -7,17 +7,26 @@
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/dashboard.css">
-    <title>SaúdePrime - Dashboard</title>
-</head>
-
-<body>
+    <title>SaúdePrime</title> 
     <header>
         <div class="container">
             <img src="../assets/logo.png" alt="Logo SaúdePrime" class="logo">
-            <h1 class="title">SaúdePrime</h1>
         </div>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#">Consultas</a></li>
+            <li><a href="#">Agenda</a></li>
+            <li><a href="#">Histórico</a></li>
+            <li><a href="#">Pacientes</a></li>
+            <li><a href="#">Profissional de Saúde</a></li>
+            <li><a href="#">Exames</a></li>
+            <li><button type="button" id="logout-button" onclick="handleLogout()">Sair</button></li>
+        </ul>
+    </nav>
+</head>
 
+<body>
     <main>
         <section class="dashboard">
             <div class="container">
@@ -25,9 +34,37 @@
                 <div class="cards">
                     <div class="card">
                         <h4>Próxima Consulta</h4>
-                        <p>Psicólogo - Dr. Assis António</p>
+                        <p>Psicólogo - Dr. Assis Antônio</p>
                         <p>Seg, 22 de abr. de 2025 - 11:30</p>
                         <button>Ver Detalhes</button>
                     </div>
                     <div class="button-container">
-                        <button>Agendar
+                        <button>Agendar Consultas</button>
+                        <button class="green-button">Ver Histórico</button> 
+                    </div>
+                    <div class="card">
+                        <h4>Resumo de Consultas</h4>
+                        <p>Pendentes: 2 | Finalizadas: 5 | Canceladas: 1</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="content">
+            <p>&copy; 2025  SaúdePrime - Todos os Direitos Reservados</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/scripts/validationEmail.js"></script>
+    <script src="/scripts/validateFormCadastro.js"></script>
+    <script src="/scripts/logout.js"></script>
+</body>
+
+</html>

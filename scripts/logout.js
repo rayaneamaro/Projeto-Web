@@ -13,5 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Função para logout
 function handleLogout() {
     sessionStorage.removeItem('user');
-    window.location.href = '/pages/login.html';
+    window.location.href = "../index.html";
+    
 }
